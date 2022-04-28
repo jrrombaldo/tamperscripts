@@ -5,6 +5,7 @@
 // @description  update fonts on quip
 // @author       You
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
+// @require      https://code.jquery.com/jquery-3.6.0.slim.min.js
 // @grant        none
 // ==/UserScript==
 
