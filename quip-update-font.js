@@ -14,12 +14,29 @@
 
 (function() {
     'use strict';
+
+    const FONT_FAMILY = 'iA Writer Quattro S';
+
+    const element = document.querySelector('.document-content'); // '.document-content' also works, need to understand the difference...
+    element.style.setProperty('--theme-font-family', FONT_FAMILY);
+    element.style.setProperty('--quipUiFontFamily', FONT_FAMILY);
+    element.style.setProperty('--spreadsheet-theme-font-family', FONT_FAMILY);
+    element.style.setProperty('--theme-font-size', '14px');
+
+    /*
+      brew install font-ia-writer-quattro
+      brew install font-ia-writer-duo
+      brew install font-ia-writer-mono
+    */
+
+
        $(document).ready(function(){
+           /*
             Array.from(document.getElementsByClassName('content')).forEach(element => {
                 element.style.setProperty('--theme-font-family', 'iA Writer Quattro S');
                 element.style.setProperty('--theme-font-size', '14px');
-                console.log(element.style.cssText);
             });
-        })
+            */
+       })
 
 })();
