@@ -7,8 +7,8 @@
 // @match        https://quip-amazon.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
 // @require      https://code.jquery.com/jquery-3.6.0.slim.min.js
-// @updateURL    https://github.com/jrrombaldo/tamperscripts/edit/main/quip-update-font.js
-// @downloadURL  https://github.com/jrrombaldo/tamperscripts/edit/main/quip-update-font.js
+// @updateURL    https://github.com/jrrombaldo/tamperscripts/edit/main/quip-style.user.js
+// @downloadURL  https://github.com/jrrombaldo/tamperscripts/edit/main/quip-style.user.js
 // @grant        none
 // ==/UserScript==
 
