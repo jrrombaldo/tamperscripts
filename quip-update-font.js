@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Quip (Re)Styler
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/jrrombaldo/tamperscripts
 // @version      0.1
 // @description  customize QUIP's style
 // @author       Carlos R
