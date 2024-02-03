@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Gammarly (Re)Styler
 // @namespace    https://github.com/jrrombaldo/tamperscripts
-// @version      0.1
+// @version      0.2
 // @description  Customize Gramamrly Style
 // @author       Carlos R
 // @match        https://app.grammarly.com/*
