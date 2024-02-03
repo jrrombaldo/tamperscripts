@@ -6,7 +6,6 @@
 // @author       Carlos R
 // @match        https://app.grammarly.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
-// @require      https://code.jquery.com/jquery-3.6.0.slim.min.js
 // @updateURL    https://github.com/jrrombaldo/tamperscripts/raw/main/grammarly-styler.user.js
 // @downloadURL  https://github.com/jrrombaldo/tamperscripts/raw/main/grammarly-styler.user.js
 // @grant        none
