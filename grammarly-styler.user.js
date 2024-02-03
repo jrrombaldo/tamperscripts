@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Gammarly (Re)Styler
 // @namespace    https://github.com/jrrombaldo/tamperscripts
-// @version      0.2
+// @version      0.3
 // @description  Customize Gramamrly Style
 // @author       Carlos R
 // @match        https://app.grammarly.com/*
@@ -17,7 +17,7 @@
     
 
 
-    const WAIT_TIME = 10000 //delay is in milliseconds
+    const WAIT_TIME = 5000 //delay is in milliseconds
 
     const FONT_FAMILY = 'spectral'
     const FONT_SIZE = '22px'
