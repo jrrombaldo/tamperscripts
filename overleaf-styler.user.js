@@ -5,6 +5,7 @@
 // @description  customize Overleaf's style
 // @author       Carlos R
 // @match        https://www.overleaf.com/project/*
+// @require      https://code.jquery.com/jquery-latest.min.js
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
 // @updateURL    https://github.com/jrrombaldo/tamperscripts/raw/main/overleaf-styler.user.js
 // @downloadURL  https://github.com/jrrombaldo/tamperscripts/raw/main/overleaf-styler.user.js
