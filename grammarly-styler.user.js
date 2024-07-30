@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Gammarly (Re)Styler
+// @name         Grammarly (Re)Styler
 // @namespace    https://github.com/jrrombaldo/tamperscripts
 // @version      0.3
 // @description  Customize Gramamrly Style
@@ -19,6 +19,7 @@
 
     const WAIT_TIME = 5000 //delay is in milliseconds
 
+    //const FONT_FAMILY = 'poppins'
     const FONT_FAMILY = 'spectral'
     const FONT_SIZE = '22px'
     const WIDTH = '52rem'
@@ -42,6 +43,7 @@
 
 
         Array.from(document.querySelectorAll('[class*=editorContent]')).forEach(div => {
+            //conosle.log(div)
             setCSS(div, 'font-family', FONT_FAMILY)
             setCSS(div, 'font-size', FONT_SIZE)
           //setCSS(div, 'max-width', WIDTH)
