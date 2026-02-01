@@ -1,81 +1,58 @@
 // ==UserScript==
-// @name         Grammarly (Re)Styler
+// @name         OverLeaf (Re)Styler
 // @namespace    https://github.com/jrrombaldo/tamperscripts
-// @version      0.3
-// @description  Customize Gramamrly Style
+// @version      0.1
+// @description  customize Overleaf's style
 // @author       Carlos R
-// @match        https://app.grammarly.com/*
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
+// @match        https://www.overleaf.com/project/*
 // @require      https://code.jquery.com/jquery-latest.min.js
-// @updateURL    https://github.com/jrrombaldo/tamperscripts/raw/main/grammarly-styler.user.js
-// @downloadURL  https://github.com/jrrombaldo/tamperscripts/raw/main/grammarly-styler.user.js
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
+// @updateURL    https://github.com/jrrombaldo/tamperscripts/raw/main/overleaf-styler.user.js
+// @downloadURL  https://github.com/jrrombaldo/tamperscripts/raw/main/overleaf-styler.user.js
 // @grant        none
 // ==/UserScript==
 
 (function() {
     'use strict';
-    
 
 
-    const WAIT_TIME = 5000 //delay is in milliseconds
-
-    //const FONT_FAMILY = 'poppins'
-    const FONT_FAMILY = 'spectral'
-    const FONT_SIZE = '22px'
-    const WIDTH = '52rem'
-
-
-
-    function css( element, property ) {
-        return window.getComputedStyle( element, null ).getPropertyValue( property );
+    function getStyle( element ) {
+        var size = window.getComputedStyle(element, null ).getPropertyValue( '--font-size' )
+        var font = window.getComputedStyle(element, null ).getPropertyValue( '--source-font-family' )
+        console.log('current font='+font+' and size'+size)
     }
-    function setCSS( element, property, value ) {
-        element.style.setProperty(property, value);
+
+    function setStyle( element ) {
+
+        element.style.setProperty('--font-size', '18px');
+        element.style.setProperty('--source-font-family', 'spectral');
+
     }
 
 
     $(document).ready(function(){
 
-        console.log('STARTING FONT CHANGE...')
-
         setTimeout(function(){
-            console.log('waited enough')
+            let text = "Should I customise the font?\nEither OK or Cancel.";
+            if (confirm(text) == true) {
+                console.log('customisation confirmed')
+
+                   Array.from(document.querySelectorAll('[class*=cm-editor]')).forEach(div => {
+                       getStyle( div );
+                       setStyle( div );
+                       getStyle( div );
+                   });
 
 
-        Array.from(document.querySelectorAll('[class*=editorContent]')).forEach(div => {
-            //conosle.log(div)
-            setCSS(div, 'font-family', FONT_FAMILY)
-            setCSS(div, 'font-size', FONT_SIZE)
-          //setCSS(div, 'max-width', WIDTH)
-
-        });
-
-
-
-  /*
-
-            var divs = document.querySelectorAll('[class*=editorContent]');
-            for(var i = 0; i < divs.length; i++){
-               //console.log('before', divs[i], css( divs[i], 'font-family'))
-
-                setCSS(divs[i], 'font-family', FONT_FAMILY)
-                setCSS(divs[i], 'font-size', FONT_SIZE)
-                //setCSS(divs[i], 'max-width', WIDTH)
-
-               //console.log('after', divs[i], css( divs[i], 'font-family'))
+            } else {
+                console.log('customisation canceled')
             }
 
-            */
 
-            console.log('FONT CHANGED !!!');
-
-
-        },WAIT_TIME);
+        }, 1000); // time to wait in ms
 
 
-  
+    })
 
 
-       
-     })
 })();
